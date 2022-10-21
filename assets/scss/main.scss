@@ -1,3 +1,6 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 // 1. Own variables
 $c-main: #1f4b99;
 $c-secondary: #29b5ba;
@@ -29,7 +32,8 @@ $fs-subtitle: 20px;
 $fw-bold: bold;
 
 // UIKIT VARS
-$global-color: $c-black;
+$global-color: #383838;
+$base-heading-color: black;
 $global-primary-background: $c-main;
 $global-secondary-background: $c-secondary;
 $global-muted-background: $c-gray;
@@ -41,8 +45,9 @@ $inverse-button-secondary-active-color: $c-white;
 $inverse-global-color:  $c-white;
 
 $global-small-font-size: $fs-small;
-$global-font-family:  Arial, Helvetica, sans-serif;
+$global-font-family:  'Poppins', sans-serif;
 $global-large-font-size: 20px;
+$global-small-font-size: 14px;
 
 $base-heading-font-weight: $fw-bold;
 $global-2xlarge-font-size: 42px;
@@ -54,6 +59,9 @@ $container-small-max-width: 800px;
 
 $card-default-background: $c-light;
 
+$button-line-heigh: 50px;
+$button-padding-horizontal: 2.5rem;
+
 // 2. Import default variables and available mixins.
 @import "../../node_modules/uikit/src/scss/variables-theme.scss";
 @import "../../node_modules/uikit/src/scss/mixins-theme.scss";
@@ -61,6 +69,14 @@ $card-default-background: $c-light;
 // 3. Your custom mixin overwrites.
 @mixin hook-card() {
 	color: #000;
+}
+
+@mixin hook-button() {
+	border-radius: 50px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border-width: 2px !important;
 }
 
 // 4. Import UIkit.

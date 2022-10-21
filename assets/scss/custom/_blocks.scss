@@ -10,3 +10,28 @@
 		background: rgba(#000 , .5);
 	}
 }
+
+.block-featured{
+	margin-top: -90px;
+	position: relative;
+	z-index: 2;
+	@media (max-width: $breakpoint-medium) {
+		margin-top: 2rem;
+	}
+	.img{
+		overflow: hidden;
+		box-shadow: inset 0 0 0 10px white;
+		border-radius: 50%;
+		padding-top: 100%;
+		background-position: center;
+		background-size: cover;
+	}
+}
+
+.block-list{
+	background: linear-gradient(180deg, rgba(242, 247, 255, 0) 0%, #F2F7FF 100%);
+	i{
+		font-size: 2rem;
+		min-width: 40px;
+	}
+}
