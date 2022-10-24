@@ -37,29 +37,38 @@
             "layout": "table",
             "pagination": 0,
             "min": 0,
-            "max": 0,
+            "max": 12,
             "collapsed": "",
             "button_label": "Sor hozzáadása",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_6352c8718712c",
-                    "label": "Ikon",
-                    "name": "ikon",
-                    "type": "text",
-                    "instructions": "fontawesome kód",
+                    "key": "field_635692facd58d",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "font-awesome",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "33",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
+                    "icon_sets": [
+                        "solid",
+                        "regular",
+                        "brands"
+                    ],
+                    "custom_icon_set": "",
+                    "default_label": "",
                     "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
+                    "save_format": "element",
+                    "allow_null": 0,
+                    "show_preview": 1,
+                    "enqueue_fa": 0,
+                    "fa_live_preview": "",
+                    "choices": [],
                     "parent_repeater": "field_6352c8678712b"
                 },
                 {
@@ -71,7 +80,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "66",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
@@ -103,5 +112,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1666370042
+    "modified": 1666618325
 }

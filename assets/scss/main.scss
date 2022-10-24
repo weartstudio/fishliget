@@ -8,7 +8,7 @@ $c-light: #EAF4FC;
 $c-light-dark: #B8CBED;
 $c-main-dark: #141C3E;
 
-$c-black: #0d0d0d;
+$c-black: black;
 $c-gray: #efefef;
 $c-white: #ffffff;
 
@@ -37,6 +37,8 @@ $base-heading-color: black;
 $global-primary-background: $c-main;
 $global-secondary-background: $c-secondary;
 $global-muted-background: $c-gray;
+$global-link-color: $global-color;
+$global-link-hover-color: $c-black;
 
 $inverse-button-secondary-background: $c-secondary;
 $inverse-button-secondary-color: $c-white;
@@ -77,6 +79,10 @@ $button-padding-horizontal: 2.5rem;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	border-width: 2px !important;
+}
+
+@mixin hook-base-link(){
+	text-decoration: underline;
 }
 
 // 4. Import UIkit.

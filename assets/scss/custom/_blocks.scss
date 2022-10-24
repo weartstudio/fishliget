@@ -20,7 +20,8 @@
 	}
 	.img{
 		overflow: hidden;
-		box-shadow: inset 0 0 0 10px white;
+		box-shadow: inset 0 0 0 10px white, 0 5px 10px rgba(#000 , .1);
+
 		border-radius: 50%;
 		padding-top: 100%;
 		background-position: center;
@@ -34,4 +35,17 @@
 		font-size: 2rem;
 		min-width: 40px;
 	}
+}
+
+.block-gallery{
+	.img{
+		display: block;
+		padding-top: 56.5%;
+		background-size: cover;
+	}
+}
+
+.block-booking{
+	background: linear-gradient(180deg, #F2F7FF 0%, rgba(242, 247, 255, 0) 100%);
+
 }

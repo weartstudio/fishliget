@@ -1,18 +1,20 @@
 {% extends "base.twig" %}
 {% block content %}
 
+{# hero #}
 <div class="block-hero uk-section uk-section-large uk-padding-remove-top uk-background-cover  uk-position-relative" style="background-image: url('{{ post.meta('hero-bg') }}')">
 	<div class="uk-container uk-container-small uk-text-center uk-light uk-position-relative">
 		<img src="{{ theme.link }}/assets/img/logo.svg" alt="fishliget logo white" class="uk-margin-large-top uk-margin-bottom" uk-img>
 		<h1 class="uk-text-uppercase">{{ post.meta('hero-title') }}</h1>
 		<p class="uk-text-large">{{ post.meta('hero-description') }}</p>
-		<a href="{{ post.meta('hero-button').url }}" class="uk-button uk-button-default uk-margin-medium-top">{{ post.meta('hero-button').title }}</a>
+		<a href="{{ post.meta('hero-button').url }}" class="uk-button uk-button-large uk-button-default uk-margin-medium-top">{{ post.meta('hero-button').title }}</a>
 	</div>
 </div>
 
+{# három kiemel #}
 <div class="block-featured">
 	<div class="uk-container uk-text-center">
-		<div class="uk-child-width-1-3@s" uk-grid>
+		<div class="uk-child-width-1-3@s uk-child-width-1-2 uk-flex-center" uk-grid>
 
 			<div>
 				<div class="img" style="background-image: url({{ post.meta('featured-1').image }})"></div>
@@ -36,6 +38,7 @@
 	</div>
 </div>
 
+{# ikonlista #}
 <div class="block-list uk-section uk-section-large">
 	<div class="uk-container">
 
@@ -47,7 +50,7 @@
 			{% for item in post.meta('list-list') %}
 				<div>
 					<div class="uk-flex-middle" uk-grid>
-						{{ item.ikon }}
+						{{ item.icon }}
 						<p class="uk-width-expand">
 							{{ item.title }}
 						</p>
@@ -56,6 +59,54 @@
 			{% endfor %}
 		</div>
 
+	</div>
+</div>
+
+{# galéria #}
+<div class="block-gallery uk-section uk-section-large">
+	<div class="uk-container">
+		<div uk-grid uk-lightbox>
+			{% for img in post.meta('gallery-images') %}
+				<div class="uk-width-1-3@m uk-width-1-2">
+					<a class="img" href="{{ img }}" style="background-image: url('{{ img }}')"></a>
+				</div>
+			{% endfor %}
+		</div>
+
+		<div class="uk-margin-large-top">
+			<p class="uk-text-bold uk-text-center uk-text-uppercase">{{ post.meta('gallery-social-text') }}</p>
+			<div class="uk-flex-center" uk-grid>
+				<a href="{{ post.meta('gallery-facebook') }}" class="uk-link-text"><i class="fab fa-facebook fa-2xl"></i></a>
+				<a href="{{ post.meta('gallery-instagram') }}" class="uk-link-text"><i class="fab fa-instagram fa-2xl"></i></a>
+				<a href="{{ post.meta('gallery-tiktok') }}" class="uk-link-text"><i class="fab fa-tiktok fa-2xl"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+{# foglalás #}
+<div id="booking" class="block-booking uk-section">
+	<div class="uk-container uk-text-small">
+		<h2 class="uk-text-uppercase uk-text-center uk-margin-medium-bottom">{{ post.meta('reservation-title') }}</h2>
+		<div uk-grid>
+
+			<div class="uk-width-1-2@s">
+				{{ booking }}
+			</div>
+
+			<div class="uk-width-1-2@s">
+				{{ post.meta('reservation-prices-text') }}
+
+				<div class="uk-margin-top" uk-grid>
+					{% for file in post.meta('reservation-download') %}
+						<div>
+							<a class="uk-button uk-button-default" href="{{ file.file.url }}">{{ file.file.title }}</a>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+
+		</div>
 	</div>
 </div>
 
