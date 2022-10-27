@@ -47,5 +47,49 @@
 
 .block-booking{
 	background: linear-gradient(180deg, #F2F7FF 0%, rgba(242, 247, 255, 0) 100%);
+}
 
+.wpbs-main-wrapper{
+	.wpbs-calendars{
+		display: flex;
+		.wpbs-calendar{
+			margin: 0 auto !important;
+		}
+	}
+	.wpbs-form-container{
+		display: none;
+	}
+	&:has(.wpbs-date.wpbs-date-selected) .wpbs-form-container{
+		max-width: 100% !important;
+		display: block;
+		.wpbs-form-fields{
+			display: grid;
+			grid-template-columns: repeat(2,1fr);
+			grid-gap: 1rem 2rem;
+			label{
+				font-weight: normal !important;
+				font-size: $global-small-font-size !important;
+			}
+			.wpbs-form-field-textarea{
+				grid-column: -1/1;
+			}
+		}
+		.wpbs-form-submit-button button[type=submit]{
+			margin: 0 !important;
+			background-color: transparent !important;
+			color: #333 !important;
+			border: 2px solid #e5e5e5 !important;
+			font-size: $global-small-font-size !important;
+			border-radius: 50px !important;
+			display: inline-block !important;
+			padding: 0 2.5rem !important;
+			line-height: 38px !important;
+			text-transform: uppercase !important;
+			&:hover{
+				background: transparent !important;
+				color: #333 !important;
+				border-color: #b2b2b2 !important;
+			}
+		}
+	}
 }
