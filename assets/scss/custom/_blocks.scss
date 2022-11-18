@@ -57,9 +57,6 @@
 		}
 	}
 	.wpbs-form-container{
-		display: none;
-	}
-	&:has(.wpbs-date.wpbs-date-selected) .wpbs-form-container{
 		max-width: 100% !important;
 		display: block;
 		.wpbs-form-fields{
